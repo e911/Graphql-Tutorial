@@ -9,7 +9,7 @@ class Category(models.Model):
 
 class Ingredient(models.Model):
     name = models.CharField(max_length=100)
-    category = models.ForeignKey(Category, related_name = 'ingredients')
+    category = models.ForeignKey(Category, related_name = 'ingredients', on_delete=True)
     description = models.TextField(max_length=500)
 
     def __str__(self):
