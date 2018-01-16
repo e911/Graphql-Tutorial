@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'graphene_django',
-    'first'
+    'first',
+    'cookbook'
 ]
 
 GRAPHENE = {
