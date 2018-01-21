@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django_extensions',
     'graphene_django',
     'first',
-    'cookbook'
+    'cookbook',
+    'filtertest',
 ]
 
 GRAPHENE = {
