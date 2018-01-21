@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'first',
     'cookbook',
     'filtertest',
+    'mutationtest',
 ]
 
 GRAPHENE = {
