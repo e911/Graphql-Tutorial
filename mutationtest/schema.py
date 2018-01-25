@@ -13,6 +13,7 @@ class PersonInput(InputObjectType):
     age = graphene.Int()
     description = graphene.String()
 
+
 class PersonNode(DjangoObjectType):
     class Meta:
         model = Person
@@ -34,8 +35,7 @@ class CreatePerson(relay.ClientIDMutation):
         person_data = dict(name=inp.get('person').get('name'),
                            age = inp.get('person').get('age'),
                            description=inp.get('person').get('description'))
-        person= Person()
-        new_person = update_create_instance(person , person_data)
+        new_person = Person(**person_data)
         return cls(new_person=new_person)
 
 
